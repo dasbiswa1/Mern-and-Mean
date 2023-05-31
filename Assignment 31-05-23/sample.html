@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box {
+      width: 300px;
+      height: 200px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Restaurant 1</h2>
+    <button onclick="showDescription('description1')">Show Description</button>
+    <button onclick="hideDescription('description1')">Hide Description</button>
+    <p id="description1" class="description">This is the description for Restaurant 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <div class="box">
+    <h2>Restaurant 2</h2>
+    <button onclick="showDescription('description2')">Show Description</button>
+    <button onclick="hideDescription('description2')">Hide Description</button>
+    <p id="description2" class="description">This is the description for Restaurant 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+
+  <script>
+    function showDescription(descriptionId) {
+      var description = document.getElementById(descriptionId);
+      description.style.display = "block";
+    }
+
+    function hideDescription(descriptionId) {
+      var description = document.getElementById(descriptionId);
+      description.style.display = "none";
+    }
+  </script>
+</body>
+</html>
